@@ -1,0 +1,741 @@
+@media (max-width: 391px){
+    .container{
+        width: 100%;
+    }
+    
+    /* HEADER */
+    .header-ion{
+        display: none;
+    }
+    #header{
+        width: 390px;
+        height: 80px;
+
+    }
+  
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 50px;
+  transform: translateX(170px);
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #FFF;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 5    ; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+   background: 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle span:checked ~ input
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fe0000;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle span:checked ~ input:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle span:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 390px;
+  margin: -129px 0 0 120px;
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+  background:grey;
+  height: 29px;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 20%;
+  transform: translateX(-451px);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+    .header-nav a{
+        display: none;
+    }
+
+    .plat{
+        margin: 0 0 0 20px;
+    }
+    /* SECTION */
+   
+    .hero{
+        background: url(../images/bacground-tel.png) no-repeat center/cover;
+        min-height: 50vh;
+    }
+    .box{
+        width: 390px;
+    }
+    .qwer h2{
+        font-size: 10px;
+
+    }
+    .qwer h3{
+        font-size: 10px;
+    }
+    .qwer ion-icon{
+        width: 10px;
+        height: 10px;
+    }
+    .hero h1{
+        font-size: 24px;
+        padding: 50px 0 0 0;
+    }
+    .for{
+        width: 350px;
+        height: 325px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 20px;
+        transform: translateY(80px);
+    }
+    .lok h2{
+        font-size: 16px;
+    }
+    .lok p{
+        font-size: 14px;
+        text-align: start;
+    }
+    .lok ion-icon{
+        width: 25px;
+        height: 25px;
+
+    }
+    .lok{
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+        margin-left: 25px;
+    }
+    .lok-3{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+
+
+    .mest{
+        width: 350px;
+        height: 172px;
+        transform: translateY(30px);
+        transform: translateX(-60px);
+        margin-top: 50px;
+    }
+    .mest img{
+        width: 336px;
+        height: 132px;
+        transform: translateX(-12px);
+    }
+    .mest h4{
+        font-size: 14px;
+        transform: translateX(75px);
+        margin-bottom: 5px;
+    }
+
+
+
+    .bilet-text{
+        margin: 20px 0 0 20px;
+    }
+    .bilet-text h1{
+        font-size: 24px;
+
+    }
+    .bilet-text p{
+        font-size: 14px;
+        text-transform: capitalize;
+        height: 350px;
+        width: 350px;
+    }
+
+    
+    .kurtr{
+        width: 350px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(480px);
+        margin-left: -430px;
+    }
+    .kurtr h3{
+        font-size: 12px;
+    }
+    .kurtr h1{
+        font-size: 24px;
+    }
+    .kurtr p{
+        font-size: 14px;
+    }
+    .kurtr img{
+        width: 320px;
+        height: 300px;
+        transform: translateY(28px);
+        margin-left: 10px;
+    }
+
+
+    .pro{
+        font-size: 24px;
+        transform: translateY(340px);
+    }
+    .begemot{
+        display: flex;
+        flex-direction: column;
+       position: relative;
+       transform: translateY(455px);
+
+    }
+    .opis{
+        width: 350px;
+        height: 308px;
+        margin-left: 20px;
+    }
+    .begemot img{
+        width: 350px;
+        height: 160px;
+        position: absolute;
+        left: 20px;
+        top: -120px;
+        border-radius: 15px 15px 0 0;
+    }
+    .opis h4{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .opis p{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .ms{
+        margin-top: 10px;
+        display: flex;
+        gap: 80px;
+    }
+    .ms-1{
+        margin-left: -20px;
+    }
+    .ms-1 h2{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .start{
+        margin-top: 26px;
+        margin-left: 10px;
+        display: flex;
+        gap: 115px;
+    }
+    .ts-2 h3{
+        font-size: 16px;
+
+    }
+    .ts-2 p{
+        margin-left: -1px;
+    }
+      
+    
+    .car{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        transform: translateY(410px);
+        position: relative;
+    }
+    .car img{
+        width: 350px;
+        height: 160px;
+        border-radius:15px 15px 0 0 ;
+        transform: translateY(45px);
+    }
+    .den{
+        width: 350px;
+        height: 440px;
+        transform: translateY(200px);
+        margin-left: 0px;
+        border-radius: 0 0 15px 15px;
+    }
+    .den h2{
+        font-size: 16px;
+        margin: 20px 0 0 10px;
+    }
+    .den p{
+        font-size: 14px;
+        margin-top: -5px;
+        margin-left: 10px;
+
+    }
+    .sred{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-left: 10px;
+    }
+    .sd h3{
+        font-size: 16px;
+    }
+    .sd p{
+        font-size: 14px;
+        margin-left:-1px;
+    }
+
+
+    .zara{
+        transform: translateY(600px);
+        margin-left: 20px;
+    }
+
+    .poli{
+        font-size: 24px;
+        margin-left: 20px;
+        width: 320px;
+        margin-top: -10px;
+    }
+
+    .btns{
+        transform: translateX(-430px);
+    }
+ 
+    .map{    
+        width: 350px;
+        height: 320px;
+        margin-left: -380px;
+        border-radius:0 0 15px 15px;
+        transform: translateY(120px);
+    }
+    .swiper-slide{
+        position: relative;
+    }
+    .swiper-slide{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+    .text{
+        width: 350px;
+        height: 290px;
+        transform: translateY(100px);
+    }
+    .sw-map{
+        width: 350px;
+        height: 120px;
+        border-radius: 15px 15px 15px 15px;
+        margin-left: -50px;
+    }
+    
+    .text h3{
+        display: none;
+        font-size: 16px;
+        position:absolute ;
+    }
+    .text p{
+        font-size: 14px;
+        display: none;
+    }
+
+    .moun{
+        transform: translateX(-200px);
+    }
+
+
+ 
+    .akardion{
+        transform: translateY(-170px);
+        margin-left: 20px;
+
+    }
+    .akardion h1{
+        font-size: 24px;
+        /* transform: translateY(-650px);
+        margin-left:-60px; */
+        width: 320px;
+    }
+
+    .akardion details{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+    }
+    .akardion details p{
+        font-size: 14px;
+        transform: translateX(-150px);
+        width: 300px;
+    }
+    .sume{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        transform: translateX(-80px);
+    }
+    .sume button{
+       transform: translateX(-30px);
+    }
+    .ddf{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .ddff-2{
+        transform: translateX(-30px);
+    }
+    .ddff-3{
+        transform: translateX(10px);
+    }
+    .ddff-4{
+        transform: translateX(78px);
+        width: 310px;
+    }
+    .ddff-5{
+        transform: translateX(10px);
+    }
+    .ddf h2{
+       font-size: 16px;
+    }
+    .ddf h5{
+        font-size: 12px;
+    }
+
+
+
+    .blocks{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transform: translateY(-200px);
+       margin-right:53px;
+       gap: 40px;
+    }
+    .block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block img{
+        width: 60px;
+        height: 60px;
+    }
+    .block h3{
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .block p{
+        font-size: 14px;
+        text-align: center;
+        margin-top:-5px;
+    }
+
+
+
+    .kons{
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-240px);
+        margin-left: 20px;
+        gap: 20px;
+    }
+    .kons h1{
+        font-size: 24px;
+
+    }
+    .vne-2{
+       transition: 0.5s;
+    }
+    .vne-2:hover{
+        transform: scale(0.8);
+    }
+    .vne-2 ion-icon{
+        width: 20px;
+    }
+    .vne-2 h4{
+        font-size: 14px;
+    }
+   
+
+
+    .email{
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-290px);
+        margin-left: 10px;
+        gap: 20px;
+    }
+    .vce h2{
+        font-size:24px;
+    }
+    .vce p{
+        font-size: 16px;
+        color:rgb(255, 255, 255);
+    }
+    
+    .name h5{
+        font-size: 12px;
+    }
+    .name input{
+        font-size: 14px;
+        width:340px;
+        height: 5px;
+    }
+     .menuu input{
+        font-size: 14px;
+        width:275px;
+        height: 5px;
+     }
+     .menuu img{
+        transform: translateY(-8px);
+     }
+     .menuu select{
+        transform: translateY(-8px);
+     }
+     .next{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+     }
+     .next h4{
+        font-size: 14px;
+     }
+     .next button{
+        font-size: 18px;
+        width: 200px;
+        height: 40px;
+     }
+
+
+
+
+     .prog{
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-350px);
+     }
+     .ost{
+        display: flex;
+        flex-direction: row;
+        margin-left: -50px;
+     }
+     .ost h3{
+        font-size: 24px;
+        display: flex;
+        margin-bottom: 20px;
+     }
+     .ost h1{
+        margin-bottom: 25px;
+        margin-left: 10px;
+        font-size: 48px;
+     }
+     .detail details{
+        transform: translateX(-150px);
+        border: 1px solid #FFF;
+        padding: 20px 20px;
+        margin: 0 0;
+     }
+     .detail details p{
+        border-bottom: 1px solid #fff;
+        width: 300px;
+     }
+
+
+
+    
+    
+    .footer{
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-420px);
+        margin-left: 20px;
+    }
+     .logic{
+        transform: translateY(-670px);
+        margin-left: 0px;
+     }
+     .logic button{
+        transform: translateX(-40px);
+     }
+     .logic h4{
+        margin-top: 10px;
+     }
+
+
+    .social{
+        transform: translateY(-310px);
+        margin-left: 0px;
+    }
+    .social p{
+        margin: -15px 0 10px 0;
+    }
+
+
+    .akyl{
+        transform: translateY(130px);
+        display: flex;
+    }
+    .akyl h4{
+        font-size: 14px;
+    }
+    .akyl button{
+        margin-left: 240px;
+        transform: translateY(-200px);
+    }
+    .akyl a{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .visa{
+        transform: translateY(350px);
+    }
+    .visa h6{
+        margin-left: 77px;
+    }
+    .visa img{
+        transform: translateY(40px);
+    }
+    .paggs{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transform: translateX(-150px);
+    }
+    .avto h6{
+        transform: translateY(380px);
+        margin-left: 77px;
+    }
+
+
+
+
+
+    #swiper{
+        padding-top: 600px;
+    }
+    .swiper{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+    }
+}
